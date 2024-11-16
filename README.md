@@ -25,7 +25,7 @@
 
 ## 📧 Contact Form Setup  
 
-1. Sign up at [EmailJS](https://emailjs.com).  
+1. Sign up at [EmailJS](https://emailjs.com)  
 2. Create a service and template in the EmailJS dashboard.  
 3. Copy the service ID, template ID, and public key to integrate with the contact form.  
 4. Use the following code snippet in your `script.js`:  
