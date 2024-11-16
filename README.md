@@ -1,6 +1,6 @@
-# 🎶 Sangeet: Musician Hire Platform  
+# 🎶 Sangeet: Musician Hiring Platform  
 
-**Musician Hire Platform** is a responsive and user-friendly website designed to help users connect with talented musicians for events, gatherings, or personal projects. Developed as part of an internship assignment, the platform features **pricing cards**, **embedded audio tracks**, and an easy-to-use **contact form** integrated with **EmailJS** for seamless communication.  
+**Sangeet** is a responsive and user-friendly website designed to help users connect with talented musicians for events, gatherings, or personal projects. Developed as part of an internship assignment, the platform features **pricing cards**, **embedded audio tracks**, and an easy-to-use **contact form** integrated with **EmailJS** for seamless communication.  
 
 ---
 
