@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sangeet</title>
+  <link rel="icon" type="image/x-icon" href="/images/logo.png">
+  <link rel="icon" type="image/png" href="images/Iste-300x300.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <script src="script.js" defer></script>
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "teNy4vXNSIveuIVzR",
+      });
+    })();
+  </script>
+
+
+
+
+
+</head>
+
+<body>
+  <header>
+    <nav class="nav container">
+      <div class="logo">
+        <img src="images/logo3.png" alt=""><span>
+          <h2>Sangeet</h2>
+        </span>
+      </div>
+      <ul class="menu_items">
+        <img src="images/times.svg" alt="Close menu" id="menu_toggle" />
+        <li><a href="index.html" class="nav_link">Home</a></li>
+        <li><a href="#events" class="nav_link">Explore</a></li>
+        <li><a href="http://www.isteonline.in/" class="nav_link">Artists</a></li>
+        <li><a href="gallery.html" class="nav_link">Events</a></li>
+        <li><a href="team.html" class="nav_link">Blogs</a></li>
+      </ul>
+      <img src="images/bars.svg" alt="Open menu" id="menu_toggle" />
+    </nav>
+  </header>
+  <section class="mainhero">
+
+    <div class="mainsec">
+
+      <div class="typeff">
+        <p>Music is</p><span class="text"></span>
+      </div>
+
+      <div class="mainsecp">
+        <p>Find the Best Artist at Best Rates!</p>
+        <button>Get Started</button>
+      </div>
+
+    </div>
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const textElement = document.querySelector(".text");
+        const texts = ["Joy", "Love", "Unity", "Peace", "Hope"];
+        let textIndex = 0;
+        let charIndex = 0;
+        let typing = true;
+
+        const type = () => {
+          if (typing) {
+            if (charIndex < texts[textIndex].length) {
+              textElement.textContent += texts[textIndex].charAt(charIndex);
+              charIndex++;
+              setTimeout(type, 150);
+            } else {
+              typing = false;
+              setTimeout(type, 2000);
+            }
+          } else {
+            if (charIndex > 0) {
+              textElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+              charIndex--;
+              setTimeout(type, 100);
+            } else {
+              typing = true;
+              textIndex = (textIndex + 1) % texts.length;
+              setTimeout(type, 500);
+            }
+          }
+        };
+
+        setTimeout(type, 1500);
+      });
+    </script>
+
+
+
+
+
+
+
+  </section>
+
+
+
+  <section class="popular">
+    <h1>Our Popular Artists</h1>
+    <div class="card-list">
+      <a href="#" class="card-item">
+        <img src="images/guitar.jpg" alt="Card Image">
+        <span class="artist1">Guitarist</span>
+        <h3>Arlo Singh</h3>
+
+        <div class="cardlow">
+          <div class="arrow">
+            <i class="fas fa-arrow-right card-icon"></i>
+          </div>
+          <audio controls>
+            <source src="audio/arlo.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+      </a>
+      <a href="#" class="card-item">
+        <img src="images/king.webp" alt="Card Image">
+        <span class="artist2">POP Artist</span>
+        <h3>Kayden Sharma</h3>
+        <div class="cardlow">
+          <div class="arrow">
+            <i class="fas fa-arrow-right card-icon"></i>
+          </div>
+          <audio controls>
+            <source src="audio/kayden.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </a>
+      <a href="#" class="card-item">
+        <img src="images/singer.jpeg" alt="Card Image">
+        <span class="artist3">Singer</span>
+        <h3>Anish Gupta</h3>
+        <div class="cardlow">
+          <div class="arrow">
+            <i class="fas fa-arrow-right card-icon"></i>
+          </div>
+          <audio controls>
+            <source src="audio/anish.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </a>
+    </div>
+  </section>
+
+
+  <h1 class="fp">Featured Performers</h1>
+  <section class="swipercon">
+    <div class="con">
+      <div class="container swiper">
+        <div class="slide-container">
+          <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="images/arman.jpg" alt="" />
+              </div>
+              <div class="profile-details">
+                <img src="images/king.webp" alt="" />
+                <div class="name-job">
+                  <h3 class="name">Arman Shah</h3>
+                  <h4 class="job">Singer</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="images/arjit.jpg" alt="" />
+              </div>
+              <div class="profile-details">
+                <img src="images/pro3.jpg" alt="" />
+                <div class="name-job">
+                  <h3 class="name">Vishnu Kumar</h3>
+                  <h4 class="job">Singer</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="images/guitar2.jpg" alt="" />
+              </div>
+              <div class="profile-details">
+                <img src="images/pro2.jpg" alt="" />
+                <div class="name-job">
+                  <h3 class="name">Danny Sharma</h3>
+                  <h4 class="job">POP Artist</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="images/dh2.jpg" alt="" />
+              </div>
+              <div class="profile-details">
+                <img src="images/pro4.jpg" alt="" />
+                <div class="name-job">
+                  <h3 class="name">Sia Mehta</h3>
+                  <h4 class="job">Guitarist</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="images/dh.jpg" alt="" />
+              </div>
+              <div class="profile-details">
+                <img src="images/pro.jpg" alt="" />
+                <div class="name-job">
+                  <h3 class="name">Swaliha Yadav</h3>
+                  <h4 class="job">Pianist</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <br>
+        <br>
+        <div class="swiper-pagination"></div>
+
+      </div>
+    </div>
+
+    <script src="swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </section>
+
+  <section class="about">
+    <div class="aboutus">
+      <div class="abtleft">
+        <h3>Who are we?</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dicta eaque a odio quae magnam explicabo
+          facilis inventore impedit ipsam sapiente similique atque, nemo ab iste nesciunt ullam. Laudantium alias labore
+          deleniti officiis totam consequuntur. Repellat in omnis rem error harum esse ab eaque porro.</p>
+        <br>
+        <h3>Why choose us?</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, mollitia perferendis eaque rem veniam
+          corrupti ipsam repellat reiciendis quos delectus at corporis velit blanditiis voluptas architecto illo amet,
+          quas.</p>
+      </div>
+      <div class="abtright">
+        <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/Svtr-p4mrQ8?si=QRieSII0lZt9u5ld&autoplay=1&mute=1"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="faqcon">
+    <div class="faq25">
+      <h1>Frequently Asked Questions</h1>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button id="accordion-button-1" aria-expanded="false">
+            <span class="accordion-title">How to book a Music Artist?
+            </span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem incidunt laborum consequuntur
+              ipsam quae nostrum laudantium cumque! Nisi, repudiandae molestias.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-2" aria-expanded="false">
+            <span class="accordion-title">Do you accept UPI?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem incidunt laborum consequuntur
+              ipsam quae nostrum laudantium cumque! Nisi, repudiandae molestias.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-3" aria-expanded="false">
+            <span class="accordion-title">I want to cancel bookings</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem incidunt laborum consequuntur
+              ipsam quae nostrum laudantium cumque! Nisi, repudiandae molestias.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-4" aria-expanded="false">
+            <span class="accordion-title">Do you offer services PAN India?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem incidunt laborum consequuntur
+              ipsam quae nostrum laudantium cumque! Nisi, repudiandae molestias.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">How to get Refund?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem incidunt laborum consequuntur
+              ipsam quae nostrum laudantium cumque! Nisi, repudiandae molestias.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>const items = document.querySelectorAll('.accordion button');
+
+      function toggleAccordion() {
+        const itemToggle = this.getAttribute('aria-expanded');
+
+        for (i = 0; i < items.length; i++) {
+          items[i].setAttribute('aria-expanded', 'false');
+        }
+
+        if (itemToggle == 'false') {
+          this.setAttribute('aria-expanded', 'true');
+        }
+      }
+
+      items.forEach((item) => item.addEventListener('click', toggleAccordion));
+
+
+
+    </script>
+  </section>
+
+  <h1 class="contacthead">Get in Touch!</h1>
+  <section class="contactform">
+    <div class="contactcon">
+
+      <input type="text" id="name" placeholder="Enter Your Name" required>
+      <input type="text" id="phone" placeholder="Phone No" required>
+      <input type="email" id="email" placeholder="Email ID" required>
+      <textarea id="message" placeholder="Type Your Message Here" required></textarea>
+      <div class="conbtn">
+        <button onclick="SendMail()">Submit</button>
+      </div>
+    </div>
+    <div><img src="images/contact.jpg" alt="">
+    </div>
+
+    <script>
+      function SendMail() {
+        var params = {
+          from_name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          phone: document.getElementById("phone").value,
+          message: document.getElementById("message").value,
+        }
+        emailjs.send("service_iwtk999", "template_zkyfoi8", params).then(function (res) {
+          alert("Success" + res.status);
+        })
+      }
+    </script>
+
+  </section>
+
+  <section class="counter2">
+    <div class="Counterinfo">
+      <div class="count">
+        <h1 class="counter">256</h1><span>
+          <h1>k+</h1>
+        </span>
+      </div>
+      <div>
+        <p>Bookings</p>
+      </div>
+    </div>
+    <div class="Counterinfo">
+      <div class="count">
+        <h1 class="counter">13</h1><span>
+          <h1>k+</h1>
+        </span>
+      </div>
+      <div>
+        <p>Artist</p>
+      </div>
+    </div>
+    <div class="Counterinfo">
+      <div class="count">
+        <h1 class="counter">367</h1><span>
+          <h1>+</h1>
+        </span>
+      </div>
+      <div>
+        <p>Events</p>
+      </div>
+    </div>
+    <div class="Counterinfo">
+      <div class="count">
+        <h1 class="counter">597</h1><span>
+          <h1>k+</h1>
+        </span>
+      </div>
+      <div>
+        <p>Users</p>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="container2">
+      <div class="row">
+        <div class="footer-col">
+          <h4>legal</h4>
+          <ul>
+
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">affiliate program</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">bookings</a></li>
+            <li><a href="#">customer care</a></li>
+            <li><a href="#">payment</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+
+            <li><a href="#">locate us</a></li>
+
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+
+
+          </div>
+        </div>
+
+
+
+
+
+
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+  <script>
+    const header = document.querySelector("header");
+    const menuToggler = document.querySelectorAll("#menu_toggle");
+    menuToggler.forEach(toggler => {
+      toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
+    });
+  </script>
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="jquery.counterup.min.js"></script>
+<script src="jquery.counterup.min.js"></script>
+
+<script>
+  jQuery(document).ready(function($) {
+      $('.counter').counterUp({
+          delay: 10,
+          time: 3000
+      });
+  });
+
+</script>
+
+
+
+
+</body>
+
+</html>
